@@ -17,6 +17,8 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://www.maybank2u.com.my/home/m2u/common/login.do')
 
+WebUI.maximizeWindow()
+
 WebUI.setText(findTestObject('Object Repository/m2u/Page_Maybank2u/input_Humanising Banking_username'), 'mosajgohar1')
 
 WebUI.click(findTestObject('Object Repository/m2u/Page_Maybank2u/button_LOGIN'))
@@ -25,7 +27,9 @@ WebUI.click(findTestObject('Object Repository/m2u/Page_Maybank2u/button_YES'))
 
 WebUI.setText(findTestObject('Object Repository/m2u/Page_Maybank2u/input_Hellomosajgohar1_badge'), 'Learning@20')
 
-WebUI.click(findTestObject('Object Repository/m2u/Page_Maybank2u/button_LOGIN_1'))
+WebUI.delay(5)
+
+WebUI.click(findTestObject('spy-m2u/Page_Maybank2u/span_LOGOUT'))
 
 WebUI.closeBrowser()
 
